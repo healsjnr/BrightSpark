@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.jeppesen.brightspark.map.CustomMapView
+            android:id="@+id/favouriteMap"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="@string/MapsAPIKEY_David_Home"
+            android:clickable="true"
+            android:enabled="true" />
+        <!-- Work dev key: @string/MapsAPIKEY_David_Work -->
+        <!-- Home dev key: @string/MapsAPIKEY_David_Home -->
+        <!-- Release dev key: @string/MapsAPIKEY_Release -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <EditText
+            android:id="@+id/addFavouriteEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="75px"
+            android:layout_weight="1"
+            android:hint="Enter Address" 
+            android:imeOptions="actionGo"
+            android:focusable="true"
+			android:focusableInTouchMode="true" 
+			android:singleLine="true">
+			
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/addFavouriteSearchButton"
+            android:layout_width="75px"
+            android:layout_height="75px"
+            android:src="@android:drawable/ic_menu_search" />
+
+        <ImageButton
+            android:id="@+id/addFavouriteCurrentLocationButton"
+            android:layout_width="75px"
+            android:layout_height="75px"
+            android:src="@android:drawable/ic_menu_compass" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addFavouriteSaveButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/addFavouriteSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Save" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.jeppesen.brightspark.map.CustomMapView
+		android:id="@+id/theMap" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:apiKey="@string/MapsAPIKEY_David_Home"
+		android:clickable="true" android:enabled="true" />
+
+		<!-- Work dev key: @string/MapsAPIKEY_David_Work -->
+        <!-- Home dev key: @string/MapsAPIKEY_David_Home -->
+        <!-- Release dev key: @string/MapsAPIKEY_Release -->
+</LinearLayout>

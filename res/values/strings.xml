@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, BrightSparkActivity!</string>
+    <string name="app_name">BrightSpark</string>
+    <string name="MapsAPIKEY_David_Work">0trlY1aeLhzRud0SerU2MPMZ3duf6YojoHBOKmA</string>
+    <string name="MapsAPIKEY_David_Home">0trlY1aeLhzQhvf3kZyIV2C1op5tWITlpe_gl1A</string>
+    <string name="MapsAPIKEY_Release">0trlY1aeLhzQ5fd0sMusnQ4yQ2OLEr9-MPSLgqA</string>
+    <string name="LeaveAfter">Leave After</string>
+    <string name="ArriveBy">Arrive By</string>
+</resources>

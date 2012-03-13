@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="leg_icon_width">10dp</dimen>
+    <dimen name="leg_time_width">60dp</dimen>
+    <dimen name="leg_minor_cell_height">30dp</dimen>
+    <dimen name="leg_major_cell_height">40dp</dimen>
+    
+</resources>

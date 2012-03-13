@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ListViewItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/tripLegMainDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/leg_icon_width" >
+
+        <LinearLayout
+            android:id="@+id/tripLegTimesLayout"
+            android:layout_width="@dimen/leg_time_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tripLegDepartTime"
+                style="@style/ListViewLegEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/leg_minor_cell_height"
+                android:text="20:00"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tripLegRouteCode"
+                style="@style/ListViewLegEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/leg_major_cell_height"
+                android:text="199"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/tripLegArrivalTime"
+                style="@style/ListViewLegEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/leg_minor_cell_height"
+                android:text="22:30"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tripLegTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tripLegDepartLocation"
+                style="@style/ListViewLegEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/leg_minor_cell_height"
+                android:text="Merthyr Rd. Cnr. Brunswick St."
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tripLegRouteDescription"
+                style="@style/ListViewLegEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/leg_major_cell_height"
+                android:text="Bus towards City"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tripLegArriveLocation"
+                style="@style/ListViewLegEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/leg_minor_cell_height"
+                android:text="City Rd. Cnr. Little St."
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

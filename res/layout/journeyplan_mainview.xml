@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/journeyPlannerFromEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="75px"
+            android:layout_weight="1"
+            android:hint="From Location" 
+            android:imeOptions="actionGo"
+            android:focusable="true"
+			android:focusableInTouchMode="true" 
+			android:singleLine="true">
+
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/journeyPlanFromFavouriteButton"
+            android:layout_width="75px"
+            android:layout_height="75px"
+            android:src="@android:drawable/btn_star" />
+        <ImageButton
+            android:id="@+id/journeyPlanCurrentLocationFromButton"
+            android:layout_width="75px"
+            android:layout_height="75px"
+            android:src="@android:drawable/ic_menu_compass" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/journeyPlannerToEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="75px"
+            android:layout_weight="1"
+            android:hint="To Location" 
+            android:imeOptions="actionGo"
+            android:focusable="true"
+			android:focusableInTouchMode="true" 
+			android:singleLine="true">
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/journeyPlanToFavouriteButton"
+            android:layout_width="75px"
+            android:layout_height="75px"
+            android:src="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/journeyPlanCurrentLocationToButton"
+            android:layout_width="75px"
+            android:layout_height="75px"
+            android:src="@android:drawable/ic_menu_compass" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/journeyPlanTimeModeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  style="@style/spinner_style"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/journeyPlanTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Time"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/journeyPlanTimeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..." />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/journeyPlanDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/journeyPlanDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..." />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/journeyPlanGoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:text="Go!" />
+
+</LinearLayout>
