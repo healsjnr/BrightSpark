@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.lib.network;
+package com.healsjnr.brightspark.lib.network;
 
 public class QueryParam {
 	public QueryParam(String name, String value){

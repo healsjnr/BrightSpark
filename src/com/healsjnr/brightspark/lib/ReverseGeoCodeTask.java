@@ -1,9 +1,9 @@
-package com.jeppesen.brightspark.lib;
+package com.healsjnr.brightspark.lib;
 
 import java.util.List;
 import java.util.Vector;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.BrightSparkActivity;
 
 import android.location.Address;
 import android.location.Geocoder;

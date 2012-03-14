@@ -1,6 +1,6 @@
-package com.jeppesen.brightspark.jjp.proxy;
+package com.healsjnr.brightspark.jjp.proxy;
 
-import com.jeppesen.brightspark.jjp.api.AvailableDataSetResponse;
+import com.healsjnr.brightspark.jjp.api.AvailableDataSetResponse;
 
 import android.os.AsyncTask;
 

@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.jjp.api;
+package com.healsjnr.brightspark.jjp.api;
 
 import java.util.Date;
 import java.util.Vector;
@@ -6,7 +6,7 @@ import java.util.Vector;
 import android.util.Log;
 
 import com.google.android.maps.OverlayItem;
-import com.jeppesen.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.lib.TimeUtils;
 
 public class TripLeg extends Leg {
 

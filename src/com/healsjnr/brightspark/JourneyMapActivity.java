@@ -1,6 +1,5 @@
-package com.jeppesen.brightspark;
+package com.healsjnr.brightspark;
 
-//screen 9
 import java.util.List;
 import java.util.Vector;
 
@@ -10,12 +9,13 @@ import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
-import com.jeppesen.brightspark.jjp.api.JJPLocation;
-import com.jeppesen.brightspark.jjp.api.Journey;
-import com.jeppesen.brightspark.jjp.api.JourneyPlan;
-import com.jeppesen.brightspark.jjp.api.Leg;
-import com.jeppesen.brightspark.map.JourneyOverlay;
-import com.jeppesen.brightspark.map.MarkerOverlay;
+import com.healsjnr.brightspark.jjp.api.JJPLocation;
+import com.healsjnr.brightspark.jjp.api.Journey;
+import com.healsjnr.brightspark.jjp.api.JourneyPlan;
+import com.healsjnr.brightspark.jjp.api.Leg;
+import com.healsjnr.brightspark.map.JourneyOverlay;
+import com.healsjnr.brightspark.map.MarkerOverlay;
+import com.healsjnr.brightspark.R;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;

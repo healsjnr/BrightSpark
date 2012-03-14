@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.Adapters;
+package com.healsjnr.brightspark.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.FavouritesPage;
-import com.jeppesen.brightspark.JourneyPlanPage;
-import com.jeppesen.brightspark.R;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.FavouritesPage;
+import com.healsjnr.brightspark.JourneyPlanPage;
+import com.healsjnr.brightspark.R;
 import com.viewpagerindicator.TitleProvider;
 
 public class MainViewPageAdapter extends PagerAdapter implements TitleProvider {

@@ -1,0 +1,20 @@
+#Compiled#
+*.com
+*.exe
+*.dll
+*.class
+*.apk
+*.o
+*.os
+
+#Databases#
+*.log
+*.sql
+*.sqlite
+
+#OS Generated#
+Thumbs.db
+
+#Jave dirs#
+/bin/*
+/gen/*

@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.jjp.api;
+package com.healsjnr.brightspark.jjp.api;
 
 public enum StatusSeverityEnum {
 

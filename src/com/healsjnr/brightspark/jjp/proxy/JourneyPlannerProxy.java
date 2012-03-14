@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.jjp.proxy;
+package com.healsjnr.brightspark.jjp.proxy;
 
 import java.util.HashMap;
 import java.util.Vector;
@@ -7,12 +7,12 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.jjp.api.AvailableDataSetResponse;
-import com.jeppesen.brightspark.jjp.api.JourneyPlan;
-import com.jeppesen.brightspark.lib.network.QueryParam;
-import com.jeppesen.brightspark.lib.network.RestResponse;
-import com.jeppesen.brightspark.lib.network.RestUtil;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.jjp.api.AvailableDataSetResponse;
+import com.healsjnr.brightspark.jjp.api.JourneyPlan;
+import com.healsjnr.brightspark.lib.network.QueryParam;
+import com.healsjnr.brightspark.lib.network.RestResponse;
+import com.healsjnr.brightspark.lib.network.RestUtil;
 
 public class JourneyPlannerProxy {
 	

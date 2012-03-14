@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.lib;
+package com.healsjnr.brightspark.lib;
 
 import com.google.android.maps.GeoPoint;
 

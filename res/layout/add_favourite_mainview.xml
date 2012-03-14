@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
-        <com.jeppesen.brightspark.map.CustomMapView
+        <com.healsjnr.brightspark.map.CustomMapView
             android:id="@+id/favouriteMap"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

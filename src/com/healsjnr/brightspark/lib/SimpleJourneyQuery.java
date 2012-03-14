@@ -1,8 +1,8 @@
-package com.jeppesen.brightspark.lib;
+package com.healsjnr.brightspark.lib;
 
 import java.util.Date;
 
-import com.jeppesen.brightspark.jjp.api.TimeMode;
+import com.healsjnr.brightspark.jjp.api.TimeMode;
 
 import android.os.Parcel;
 import android.os.Parcelable;

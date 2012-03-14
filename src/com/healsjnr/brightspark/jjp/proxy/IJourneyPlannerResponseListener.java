@@ -1,7 +1,7 @@
-package com.jeppesen.brightspark.jjp.proxy;
+package com.healsjnr.brightspark.jjp.proxy;
 
-import com.jeppesen.brightspark.jjp.api.AvailableDataSetResponse;
-import com.jeppesen.brightspark.jjp.api.JourneyPlan;
+import com.healsjnr.brightspark.jjp.api.AvailableDataSetResponse;
+import com.healsjnr.brightspark.jjp.api.JourneyPlan;
 
 public interface IJourneyPlannerResponseListener {
 	

@@ -1,10 +1,10 @@
-package com.jeppesen.brightspark.jjp.proxy;
+package com.healsjnr.brightspark.jjp.proxy;
 
-import com.jeppesen.brightspark.ApplicationState;
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.jjp.api.JourneyPlan;
-import com.jeppesen.brightspark.lib.SimpleJourneyQuery;
-import com.jeppesen.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.ApplicationState;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.jjp.api.JourneyPlan;
+import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.lib.TimeUtils;
 
 import android.os.AsyncTask;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.map;
+package com.healsjnr.brightspark.map;
 
 import java.util.Vector;
 
@@ -12,11 +12,11 @@ import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 import com.google.android.maps.Projection;
-import com.jeppesen.brightspark.jjp.api.Journey;
-import com.jeppesen.brightspark.jjp.api.Leg;
-import com.jeppesen.brightspark.jjp.api.TransferLeg;
-import com.jeppesen.brightspark.jjp.api.TripLeg;
-import com.jeppesen.brightspark.jjp.api.WalkLeg;
+import com.healsjnr.brightspark.jjp.api.Journey;
+import com.healsjnr.brightspark.jjp.api.Leg;
+import com.healsjnr.brightspark.jjp.api.TransferLeg;
+import com.healsjnr.brightspark.jjp.api.TripLeg;
+import com.healsjnr.brightspark.jjp.api.WalkLeg;
 
 public class JourneyOverlay extends Overlay {
 

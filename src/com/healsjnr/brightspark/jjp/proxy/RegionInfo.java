@@ -1,12 +1,12 @@
-package com.jeppesen.brightspark.jjp.proxy;
+package com.healsjnr.brightspark.jjp.proxy;
 
 import java.util.Date;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.jjp.api.AvailableDataSetResponse;
-import com.jeppesen.brightspark.jjp.api.DataSet;
-import com.jeppesen.brightspark.lib.GeoPosition;
-import com.jeppesen.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.jjp.api.AvailableDataSetResponse;
+import com.healsjnr.brightspark.jjp.api.DataSet;
+import com.healsjnr.brightspark.lib.GeoPosition;
+import com.healsjnr.brightspark.lib.TimeUtils;
 
 import android.R.bool;
 import android.util.Log;

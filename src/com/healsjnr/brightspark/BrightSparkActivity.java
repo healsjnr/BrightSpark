@@ -1,7 +1,8 @@
-package com.jeppesen.brightspark;
+package com.healsjnr.brightspark;
 
-import com.jeppesen.brightspark.Adapters.MainViewPageAdapter;
-import com.jeppesen.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.Adapters.MainViewPageAdapter;
+import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.R;
 import com.viewpagerindicator.TitlePageIndicator;
 import com.viewpagerindicator.TitlePageIndicator.IndicatorStyle;
 

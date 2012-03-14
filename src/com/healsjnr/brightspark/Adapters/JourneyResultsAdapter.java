@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.Adapters;
+package com.healsjnr.brightspark.Adapters;
 
 import java.util.List;
 import java.util.Vector;
@@ -17,14 +17,14 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.jeppesen.brightspark.ApplicationState;
-import com.jeppesen.brightspark.JourneyMapActivity;
-import com.jeppesen.brightspark.JourneyResultsActivity;
-import com.jeppesen.brightspark.R;
-import com.jeppesen.brightspark.jjp.api.Journey;
-import com.jeppesen.brightspark.jjp.api.JourneyPlan;
-import com.jeppesen.brightspark.jjp.api.Leg;
-import com.jeppesen.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.ApplicationState;
+import com.healsjnr.brightspark.JourneyMapActivity;
+import com.healsjnr.brightspark.JourneyResultsActivity;
+import com.healsjnr.brightspark.jjp.api.Journey;
+import com.healsjnr.brightspark.jjp.api.JourneyPlan;
+import com.healsjnr.brightspark.jjp.api.Leg;
+import com.healsjnr.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.R;
 import com.viewpagerindicator.TitleProvider;
 
 public class JourneyResultsAdapter extends PagerAdapter implements

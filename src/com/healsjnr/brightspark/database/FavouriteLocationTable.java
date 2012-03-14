@@ -1,6 +1,6 @@
-package com.jeppesen.brightspark.database;
+package com.healsjnr.brightspark.database;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.BrightSparkActivity;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.lib.network;
+package com.healsjnr.brightspark.lib.network;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,8 +21,8 @@ import org.json.JSONObject;
 
 import android.util.Log;
 
-import com.jeppesen.brightspark.ApplicationState;
-import com.jeppesen.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.ApplicationState;
+import com.healsjnr.brightspark.BrightSparkActivity;
 
 public class RestUtil {
 	public static String BuildRestURL(String baseUrl, List<QueryParam> parameters)

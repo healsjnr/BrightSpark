@@ -1,15 +1,16 @@
-package com.jeppesen.brightspark;
+package com.healsjnr.brightspark;
 
 import java.util.Calendar;
 import java.util.List;
 import java.util.Vector;
 
-import com.jeppesen.brightspark.Adapters.FavouriteLocationItemAdapter;
-import com.jeppesen.brightspark.Adapters.MainViewPageAdapter;
-import com.jeppesen.brightspark.database.FavouriteDatabaseAdapter;
-import com.jeppesen.brightspark.jjp.api.TimeMode;
-import com.jeppesen.brightspark.lib.FavouriteLocation;
-import com.jeppesen.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.Adapters.FavouriteLocationItemAdapter;
+import com.healsjnr.brightspark.Adapters.MainViewPageAdapter;
+import com.healsjnr.brightspark.database.FavouriteDatabaseAdapter;
+import com.healsjnr.brightspark.jjp.api.TimeMode;
+import com.healsjnr.brightspark.lib.FavouriteLocation;
+import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.R;
 
 import android.app.Activity;
 import android.content.Context;

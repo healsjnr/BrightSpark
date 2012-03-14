@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.lib;
+package com.healsjnr.brightspark.lib;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.BrightSparkActivity;
 
 import android.text.format.Time;
 import android.util.Log;

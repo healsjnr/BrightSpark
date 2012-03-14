@@ -1,14 +1,14 @@
-package com.jeppesen.brightspark.Adapters;
+package com.healsjnr.brightspark.Adapters;
 
 import java.util.Vector;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.R;
-import com.jeppesen.brightspark.jjp.api.Leg;
-import com.jeppesen.brightspark.jjp.api.TransferLeg;
-import com.jeppesen.brightspark.jjp.api.TripLeg;
-import com.jeppesen.brightspark.jjp.api.WalkLeg;
-import com.jeppesen.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.jjp.api.Leg;
+import com.healsjnr.brightspark.jjp.api.TransferLeg;
+import com.healsjnr.brightspark.jjp.api.TripLeg;
+import com.healsjnr.brightspark.jjp.api.WalkLeg;
+import com.healsjnr.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.R;
 
 import android.app.Activity;
 import android.content.Context;

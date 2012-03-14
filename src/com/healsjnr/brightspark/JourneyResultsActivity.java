@@ -1,20 +1,21 @@
-package com.jeppesen.brightspark;
+package com.healsjnr.brightspark;
 
 import java.util.List;
 
-import com.jeppesen.brightspark.Adapters.JourneyResultsAdapter;
-import com.jeppesen.brightspark.Adapters.MainViewPageAdapter;
-import com.jeppesen.brightspark.jjp.api.AvailableDataSetResponse;
-import com.jeppesen.brightspark.jjp.api.JourneyPlan;
-import com.jeppesen.brightspark.jjp.proxy.GetJourneyPlanTask;
-import com.jeppesen.brightspark.jjp.proxy.IJourneyPlannerResponseListener;
-import com.jeppesen.brightspark.lib.GeoPosition;
-import com.jeppesen.brightspark.lib.GetCurrentGeoLocationTask;
-import com.jeppesen.brightspark.lib.IGeoCodedAddressReady;
-import com.jeppesen.brightspark.lib.IGeoLocationReadyListener;
-import com.jeppesen.brightspark.lib.LocationWrapper;
-import com.jeppesen.brightspark.lib.SimpleAddress;
-import com.jeppesen.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.Adapters.JourneyResultsAdapter;
+import com.healsjnr.brightspark.Adapters.MainViewPageAdapter;
+import com.healsjnr.brightspark.jjp.api.AvailableDataSetResponse;
+import com.healsjnr.brightspark.jjp.api.JourneyPlan;
+import com.healsjnr.brightspark.jjp.proxy.GetJourneyPlanTask;
+import com.healsjnr.brightspark.jjp.proxy.IJourneyPlannerResponseListener;
+import com.healsjnr.brightspark.lib.GeoPosition;
+import com.healsjnr.brightspark.lib.GetCurrentGeoLocationTask;
+import com.healsjnr.brightspark.lib.IGeoCodedAddressReady;
+import com.healsjnr.brightspark.lib.IGeoLocationReadyListener;
+import com.healsjnr.brightspark.lib.LocationWrapper;
+import com.healsjnr.brightspark.lib.SimpleAddress;
+import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.R;
 import com.viewpagerindicator.TitlePageIndicator;
 import com.viewpagerindicator.TitlePageIndicator.IndicatorStyle;
 

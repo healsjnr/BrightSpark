@@ -1,6 +1,6 @@
-package com.jeppesen.brightspark;
+package com.healsjnr.brightspark;
 
-import com.jeppesen.brightspark.jjp.api.Journey;
+import com.healsjnr.brightspark.jjp.api.Journey;
 
 public class ApplicationState {
 	

@@ -1,8 +1,8 @@
-package com.jeppesen.brightspark.lib.ui;
+package com.healsjnr.brightspark.lib.ui;
 
 import java.util.List;
 
-import com.jeppesen.brightspark.lib.SimpleAddress;
+import com.healsjnr.brightspark.lib.SimpleAddress;
 
 import android.app.Activity;
 import android.app.AlertDialog;

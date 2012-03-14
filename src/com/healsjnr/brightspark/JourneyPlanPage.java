@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark;
+package com.healsjnr.brightspark;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -7,16 +7,17 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Vector;
 
-import com.jeppesen.brightspark.Adapters.FavouriteLocationItemAdapter;
-import com.jeppesen.brightspark.database.FavouriteDatabaseAdapter;
-import com.jeppesen.brightspark.jjp.api.TimeMode;
-import com.jeppesen.brightspark.lib.FavouriteLocation;
-import com.jeppesen.brightspark.lib.ForwardGeoCodeTask;
-import com.jeppesen.brightspark.lib.IGeoCodedAddressReady;
-import com.jeppesen.brightspark.lib.SimpleAddress;
-import com.jeppesen.brightspark.lib.SimpleJourneyQuery;
-import com.jeppesen.brightspark.lib.TimeUtils;
-import com.jeppesen.brightspark.lib.ui.UITools;
+import com.healsjnr.brightspark.Adapters.FavouriteLocationItemAdapter;
+import com.healsjnr.brightspark.database.FavouriteDatabaseAdapter;
+import com.healsjnr.brightspark.jjp.api.TimeMode;
+import com.healsjnr.brightspark.lib.FavouriteLocation;
+import com.healsjnr.brightspark.lib.ForwardGeoCodeTask;
+import com.healsjnr.brightspark.lib.IGeoCodedAddressReady;
+import com.healsjnr.brightspark.lib.SimpleAddress;
+import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.lib.ui.UITools;
+import com.healsjnr.brightspark.R;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;

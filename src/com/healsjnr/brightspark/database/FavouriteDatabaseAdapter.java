@@ -1,12 +1,12 @@
-package com.jeppesen.brightspark.database;
+package com.healsjnr.brightspark.database;
 
 import java.util.List;
 import java.util.Vector;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.lib.FavouriteLocation;
-import com.jeppesen.brightspark.lib.GeoPosition;
-import com.jeppesen.brightspark.lib.SimpleAddress;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.lib.FavouriteLocation;
+import com.healsjnr.brightspark.lib.GeoPosition;
+import com.healsjnr.brightspark.lib.SimpleAddress;
 
 import android.content.ContentValues;
 import android.content.Context;

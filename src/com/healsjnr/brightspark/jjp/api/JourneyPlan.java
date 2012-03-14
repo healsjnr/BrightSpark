@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.jjp.api;
+package com.healsjnr.brightspark.jjp.api;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -7,9 +7,9 @@ import java.util.Vector;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.jjp.proxy.JourneyPlannerProxy;
-import com.jeppesen.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.jjp.proxy.JourneyPlannerProxy;
+import com.healsjnr.brightspark.lib.TimeUtils;
 
 import android.util.Log;
 

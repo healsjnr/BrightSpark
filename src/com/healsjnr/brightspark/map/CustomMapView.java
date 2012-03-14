@@ -1,4 +1,4 @@
-package com.jeppesen.brightspark.map;
+package com.healsjnr.brightspark.map;
 
 import java.util.Timer;
 import java.util.TimerTask;

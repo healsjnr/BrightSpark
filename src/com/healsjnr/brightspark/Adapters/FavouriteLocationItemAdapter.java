@@ -1,16 +1,16 @@
-package com.jeppesen.brightspark.Adapters;
+package com.healsjnr.brightspark.Adapters;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import com.jeppesen.brightspark.BrightSparkActivity;
-import com.jeppesen.brightspark.JourneyResultsActivity;
-import com.jeppesen.brightspark.R;
-import com.jeppesen.brightspark.jjp.api.TimeMode;
-import com.jeppesen.brightspark.lib.FavouriteLocation;
-import com.jeppesen.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.BrightSparkActivity;
+import com.healsjnr.brightspark.JourneyResultsActivity;
+import com.healsjnr.brightspark.jjp.api.TimeMode;
+import com.healsjnr.brightspark.lib.FavouriteLocation;
+import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.R;
 
 import android.app.Activity;
 import android.content.Context;
