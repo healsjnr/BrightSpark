@@ -145,11 +145,25 @@ public class RestUtil {
     	} catch (ClientProtocolException e)
     	{
     		Log.e(BrightSparkActivity.LOG_TAG, "DoRESTQuery - There was a protocol based error", e);
-    		httpClient.getConnectionManager().shutdown();
+    		if (httpClient.getConnectionManager() != null)
+    		{
+    			httpClient.getConnectionManager().shutdown();
+    		}
     	} catch (IOException e)
     	{
     		Log.e(BrightSparkActivity.LOG_TAG, "DoRESTQuery - There was an IO Stream related error", e);
-    		httpClient.getConnectionManager().shutdown();
+    		if (httpClient.getConnectionManager() != null)
+    		{
+    			httpClient.getConnectionManager().shutdown();
+    		}
+    	} catch (Exception e)
+    	{
+    		Log.e(BrightSparkActivity.LOG_TAG, "DoRESTQuery - Unknown Exception", e);
+    		if (httpClient.getConnectionManager() != null)
+    		{
+    			httpClient.getConnectionManager().shutdown();
+    		}
+    		
     	}
     	
     	response.setSuccessful(false);

@@ -34,6 +34,7 @@ public class BrightSparkActivity extends Activity {
 	    indicator.setFooterIndicatorStyle(IndicatorStyle.Underline);
 	    indicator.setFooterIndicatorPadding(8f);
 	    indicator.setViewPager(pager);
+	    indicator.setOnPageChangeListener(m_mainViewAdapter.getOnPageChangedListener());
 	    
 	    pager.setCurrentItem(MainViewPageAdapter.COUNTDOWN_INDEX);
         

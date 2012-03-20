@@ -158,13 +158,19 @@ public class JourneyResultsActivity extends Activity implements
 		
 		m_journeyPlan = jp;
 
-		setContentView(R.layout.journeyplan_results_mainview);
-
 		if (jp == null || jp.getJourneys() == null || jp.getJourneys().size() == 0) {
 			// NOTE: Need to put in Error handling.
-			displayDialog("No Journeys Found");
-			finish();
+			displayDialog("No Journeys Found", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					JourneyResultsActivity.this.finish();
+				}
+			});
+			
+			return;
 		}
+		
+		setContentView(R.layout.journeyplan_results_mainview);
 
 		m_journeyAdapter = new JourneyResultsAdapter(this,
 				getApplicationContext(), jp);
@@ -191,6 +197,15 @@ public class JourneyResultsActivity extends Activity implements
 					public void onClick(DialogInterface arg0, int arg1) {
 					}
 				}).setMessage(messageText).create();
+		dialog.show();
+	}
+	
+	private void displayDialog(String messageText, DialogInterface.OnClickListener listener) {
+		String messageType = "Oooops...";
+
+		Dialog dialog = new AlertDialog.Builder(this).setIcon(0)
+				.setTitle(messageType)
+				.setPositiveButton("Ok", listener).setMessage(messageText).create();
 		dialog.show();
 	}
 

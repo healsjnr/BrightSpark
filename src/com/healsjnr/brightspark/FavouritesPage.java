@@ -10,6 +10,7 @@ import com.healsjnr.brightspark.database.FavouriteDatabaseAdapter;
 import com.healsjnr.brightspark.jjp.api.TimeMode;
 import com.healsjnr.brightspark.lib.FavouriteLocation;
 import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
+import com.healsjnr.brightspark.lib.ui.IPageChangedListener;
 import com.healsjnr.brightspark.R;
 
 import android.app.Activity;
@@ -22,7 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-public class FavouritesPage {
+public class FavouritesPage implements IPageChangedListener {
 
 	private Context m_context;
 	private BrightSparkActivity m_parentActivity;
@@ -113,5 +114,12 @@ public class FavouritesPage {
 		m_parentActivity.startActivityForResult(addFavouriteIntent, MainViewPageAdapter.FAVOURITE_INTENT);
 		
 	}
-	
+
+	@Override
+	public void selectedPageUpdated(int position) {
+		if (position == MainViewPageAdapter.FAVOURITES_INDEX)
+		{
+			populateLocations();
+		}
+	}
 }

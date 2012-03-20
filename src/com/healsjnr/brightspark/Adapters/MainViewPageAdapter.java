@@ -13,6 +13,7 @@ import android.view.View;
 import com.healsjnr.brightspark.BrightSparkActivity;
 import com.healsjnr.brightspark.FavouritesPage;
 import com.healsjnr.brightspark.JourneyPlanPage;
+import com.healsjnr.brightspark.lib.ui.IPageChangedListener;
 import com.healsjnr.brightspark.R;
 import com.viewpagerindicator.TitleProvider;
 
@@ -34,6 +35,7 @@ public class MainViewPageAdapter extends PagerAdapter implements TitleProvider {
 	// Parent activity and context members.  
 	private BrightSparkActivity m_parentActivity;
 	private Context m_context;
+	private MainViewPageChangedListener m_viewChangedListerner;
 	
 	private final String[] m_titles = new String [] {
 			"Plan",
@@ -47,6 +49,13 @@ public class MainViewPageAdapter extends PagerAdapter implements TitleProvider {
 		m_context = parentCotnext;
 		m_favouritesPage = new FavouritesPage(m_parentActivity, m_context);
 		m_journeyPage = new JourneyPlanPage(m_parentActivity, m_context);
+		IPageChangedListener[] listeners = {m_favouritesPage, m_journeyPage};
+		m_viewChangedListerner = new MainViewPageChangedListener(listeners);
+	}
+	
+	public MainViewPageChangedListener getOnPageChangedListener()
+	{
+		return m_viewChangedListerner;
 	}
 	
 	// Helper method to create the correct view based on the position

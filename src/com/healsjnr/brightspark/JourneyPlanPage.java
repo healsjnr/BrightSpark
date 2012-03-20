@@ -8,6 +8,7 @@ import java.util.Locale;
 import java.util.Vector;
 
 import com.healsjnr.brightspark.Adapters.FavouriteLocationItemAdapter;
+import com.healsjnr.brightspark.Adapters.MainViewPageAdapter;
 import com.healsjnr.brightspark.database.FavouriteDatabaseAdapter;
 import com.healsjnr.brightspark.jjp.api.TimeMode;
 import com.healsjnr.brightspark.lib.FavouriteLocation;
@@ -16,6 +17,7 @@ import com.healsjnr.brightspark.lib.IGeoCodedAddressReady;
 import com.healsjnr.brightspark.lib.SimpleAddress;
 import com.healsjnr.brightspark.lib.SimpleJourneyQuery;
 import com.healsjnr.brightspark.lib.TimeUtils;
+import com.healsjnr.brightspark.lib.ui.IPageChangedListener;
 import com.healsjnr.brightspark.lib.ui.UITools;
 import com.healsjnr.brightspark.R;
 
@@ -44,7 +46,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class JourneyPlanPage implements IGeoCodedAddressReady {
+public class JourneyPlanPage implements IGeoCodedAddressReady, IPageChangedListener {
 
 	private Context m_context;
 	private BrightSparkActivity m_parentActivity;
@@ -458,7 +460,6 @@ public class JourneyPlanPage implements IGeoCodedAddressReady {
 					break;
 				default:
 					return;
-
 				}
 				
 				m_currentLocationGeoCoding = null;
@@ -473,4 +474,11 @@ public class JourneyPlanPage implements IGeoCodedAddressReady {
 
 	}
 
+	@Override
+	public void selectedPageUpdated(int position) {
+		if (position == MainViewPageAdapter.PLAN_JOURNEY_INDEX)
+		{
+			populateLocations();
+		}
+	}
 }
