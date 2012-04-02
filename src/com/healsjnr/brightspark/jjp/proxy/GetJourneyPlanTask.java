@@ -12,10 +12,12 @@ import android.util.Log;
 public class GetJourneyPlanTask extends AsyncTask<SimpleJourneyQuery, Void, JourneyPlan> {
 
 	IJourneyPlannerResponseListener m_responseListener;
+	JourneyPlannerProxy m_jpProxy;
 
 	public GetJourneyPlanTask(IJourneyPlannerResponseListener responseListener)
 	{
 		m_responseListener = responseListener;
+		m_jpProxy = new JourneyPlannerProxy();
 	}
 	
 	@Override
@@ -26,7 +28,7 @@ public class GetJourneyPlanTask extends AsyncTask<SimpleJourneyQuery, Void, Jour
 			return null;
 		}
 		SimpleJourneyQuery query = queries[0];
-		return JourneyPlannerProxy.doJourneyPlan(ApplicationState.DATA_SET, query.getOrigin().toString(),
+		return m_jpProxy.doJourneyPlan(ApplicationState.DATA_SET, query.getOrigin().toString(),
 				query.getDestination().toString(), TimeUtils.getDateString(query.getDateTime()), 
 				query.getTimeMode().toString(), query.getNumJourneys());
 		

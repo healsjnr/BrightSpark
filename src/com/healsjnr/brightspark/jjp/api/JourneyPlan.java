@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Vector;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.healsjnr.brightspark.BrightSparkActivity;
@@ -24,6 +25,9 @@ public class JourneyPlan {
 	private String m_journeyOriginString;
 	private String m_journeyDestinationString;
 	
+	private boolean m_journeyPlanSuccess;
+	private String m_journeyPlanErrorMessage;
+	
 	public JourneyPlan()
 	{
 		m_serviceProviderMap = new HashMap<String, ServiceProvider>();
@@ -31,7 +35,19 @@ public class JourneyPlan {
 		m_transitLocations = new HashMap<String, TransitLocation>();
 		m_geoLocations = new HashMap<String, GeoLocation>();
 		m_journeys = new Vector<Journey>();
+		m_journeyPlanSuccess = false;
+		m_journeyPlanErrorMessage = "Unitialised.";
 		
+	}
+	
+	public boolean isJourneyPlanSuccessful()
+	{
+		return m_journeyPlanSuccess;
+	}
+	
+	public String getErrorMessage()
+	{
+		return m_journeyPlanErrorMessage;
 	}
 	
 	public String toString()
@@ -171,15 +187,60 @@ public class JourneyPlan {
 	{
 		JSONObject j = new JSONObject(jsonJourneyPlan);
 		JSONObject request = j.getJSONObject("Request");
-		JSONArray journeys = j.getJSONArray("Journeys");
+		JSONObject status = j.getJSONObject("Status");
+		
+		if (!parseStatus(status))
+		{
+			return;
+		}
+		
+		JSONArray journeys;
+		
+		try {
+			journeys = j.getJSONArray("Journeys");
+		} catch (Exception e) {
+			m_journeyPlanErrorMessage = "No Journeys.";
+			Log.e(BrightSparkActivity.LOG_TAG,"parseJourneyPlan - No Journeys Found.");
+			return;
+		}
+		
 		JSONArray serviceProviders = j.getJSONArray("ServiceProviderReferenceData");
 		JSONArray locations = j.getJSONArray("Locations");
 		
 		addLocationsFromJSONArray(locations);
 		addServiceProvidersFromJSONArray(serviceProviders);
 		addJourneysFromJSONArray(journeys);
+		
+		m_journeyPlanSuccess = true;
+		m_journeyPlanErrorMessage = "OK";
+		
 	}
-	
+
+	private boolean parseStatus(JSONObject status) throws JSONException{
+		
+		if (status == null)
+		{
+			return false;
+		}
+		
+		int severity = status.getInt("Severity");
+		if (severity != 0)
+		{
+			m_journeyPlanErrorMessage = "";
+			JSONArray details = status.getJSONArray("Details");
+			for (int i = 0; i < details.length(); i++)
+			{
+				String messageDetails = ((JSONObject)details.get(i)).getString("Message");
+				m_journeyPlanErrorMessage += messageDetails;
+			}
+			return false;
+		}
+				
+		return true;
+		
+		
+	}
+
 	// Parses a JSON array of journeys into journey objects. 
 	public void addJourneysFromJSONArray(JSONArray journeys) throws Exception
 	{

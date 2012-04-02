@@ -1,0 +1,16 @@
+{
+	"Request": {
+		"ApiKey": "978a628a-7847-4461-b7d3-55913fc01c8e",
+		"Origin": null,
+		"Destination": null,
+		"JourneyTime": null,
+		"DataSet": "Brisbane"
+	},
+	"Status": {
+		"Severity": 2,
+		"Details": [{
+			"Code": 0,
+			"Message": "Unknown From station code: null"
+		}]
+	}
+}

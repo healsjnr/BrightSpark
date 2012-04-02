@@ -1,0 +1,25 @@
+{
+	"Request": {
+		"ApiKey": "978a628a-7847-4461-b7d3-55913fc01c8e",
+		"Origin": {
+			"LocationType": 2,
+			"Value": "Perth:10000"
+		},
+		"Destination": {
+			"LocationType": 2,
+			"Value": "Perth:10021"
+		},
+		"JourneyTime": "2012-03-31T02:00",
+		"DataSet": "Perth",
+		"IsMappingDataReturned": true,
+		"MaxJourneys": 0
+	},
+	"ServiceProviderReferenceData": [],
+	"Status": {
+		"Severity": 0,
+		"Details": [{
+			"Code": 3,
+			"Message": "No Journeys Found"
+		}]
+	}
+}

@@ -1,6 +1,5 @@
 package com.healsjnr.brightspark.jjp.proxy;
 
-import java.util.HashMap;
 import java.util.Vector;
 
 import android.util.Log;
@@ -10,6 +9,7 @@ import com.google.gson.GsonBuilder;
 import com.healsjnr.brightspark.BrightSparkActivity;
 import com.healsjnr.brightspark.jjp.api.AvailableDataSetResponse;
 import com.healsjnr.brightspark.jjp.api.JourneyPlan;
+import com.healsjnr.brightspark.lib.network.IRestUtil;
 import com.healsjnr.brightspark.lib.network.QueryParam;
 import com.healsjnr.brightspark.lib.network.RestResponse;
 import com.healsjnr.brightspark.lib.network.RestUtil;
@@ -18,7 +18,7 @@ public class JourneyPlannerProxy {
 	
 	private static final String API_KEY = "733f873a-1e77-4c14-a84c-55ebf1a23cd7";
 	private static final String DATA_SET_TOKEN = "{DATA_SET}";
-	private static final String SERVICE_URI = "http://journeyplanner.jeppesen.com/journeyplannerservice/v2/rest/DataSets";
+	public static final String SERVICE_URI = "http://journeyplanner.jeppesen.com/journeyplannerservice/v2/rest/DataSets";
 	
 	// JSON type string definitions: Location 
 	public static final String TYPE_STRING_TRANSIT_LOCATION = "TransitStop:http://www.jeppesen.com/journeyplanner";
@@ -28,8 +28,21 @@ public class JourneyPlannerProxy {
 	public static final String TYPE_STRING_WALK_LEG = "WalkLeg:http://www.jeppesen.com/journeyplanner";
 	public static final String TYPE_STRING_TRANSFER_LEG = "TransferLeg:http://www.jeppesen.com/journeyplanner";
 	public static final String TYPE_STRING_TRIP_LEG = "TripLeg:http://www.jeppesen.com/journeyplanner";
+	
+	private IRestUtil m_restUtil;
+	
+	public JourneyPlannerProxy()
+	{
+		m_restUtil = new RestUtil();
+	}
+	
+	public JourneyPlannerProxy(IRestUtil restUtil)
+	{
+		m_restUtil = restUtil;
+	}
+	
 
-	public static AvailableDataSetResponse getAvailableDataSets()
+	public AvailableDataSetResponse getAvailableDataSets()
 	{
 		String queryString = generateAvailableDataSetRequestUrl();
 		return executeAvailableDataSetRequest(queryString);
@@ -39,19 +52,19 @@ public class JourneyPlannerProxy {
 	 * Creates a rest URL used to execute a get available data set query. 
 	 * @return
 	 */
-	public static String generateAvailableDataSetRequestUrl()
+	public String generateAvailableDataSetRequestUrl()
 	{
 		Vector<QueryParam> params = new Vector<QueryParam>();
 		
 		params.add(new QueryParam("ApiKey", API_KEY));
 		params.add(new QueryParam("Format", "json"));
 		
-		return RestUtil.BuildRestURL(SERVICE_URI, params);	
+		return m_restUtil.BuildRestURL(SERVICE_URI, params);	
 	}
 	
-	public static AvailableDataSetResponse executeAvailableDataSetRequest(String restUrl)
+	public AvailableDataSetResponse executeAvailableDataSetRequest(String restUrl)
 	{
-		RestResponse response = RestUtil.DoHttpGet(restUrl);
+		RestResponse response = m_restUtil.DoHttpGet(restUrl);
 		
 		Log.i(BrightSparkActivity.LOG_TAG, "executeAvailableDataSetRequest - Result Code: " + response.getCode());
     	
@@ -89,7 +102,7 @@ public class JourneyPlannerProxy {
     	}
 	}
 
-	public static JourneyPlan doJourneyPlan(String dataSet, String from, String to, String dateTime, String timeMode, int numJourneys)
+	public JourneyPlan doJourneyPlan(String dataSet, String from, String to, String dateTime, String timeMode, int numJourneys)
 	{
 		String queryString = generateJourneyPlanningRequestUrl(dataSet, from, to, dateTime, timeMode, numJourneys);
 		return executeJourneyPlanRequest(queryString);
@@ -101,7 +114,7 @@ public class JourneyPlannerProxy {
 	 * @param to a string in the format "number,number" representing
 	 * @return a string that can be passed to  
 	 */
-	public static String generateJourneyPlanningRequestUrl(String dataSet, String from, String to, String dateTime, String timeMode, int numJourneys)
+	public String generateJourneyPlanningRequestUrl(String dataSet, String from, String to, String dateTime, String timeMode, int numJourneys)
 	{
 		Vector<QueryParam> params = new Vector<QueryParam>();
 		
@@ -116,7 +129,7 @@ public class JourneyPlannerProxy {
 		
 		String baseUri = SERVICE_URI + "/" + dataSet + "/JourneyPlan";
 		
-		return RestUtil.BuildRestURL(baseUri, params);	
+		return m_restUtil.BuildRestURL(baseUri, params);	
 	}
 	
 	/**
@@ -125,10 +138,10 @@ public class JourneyPlannerProxy {
 	 * @return A fully formed JourneyPlan object or null. If any error is encountered execute the journey plan or 
 	 * parsing the result at any point, null will be returned.  
 	 */
-	public static JourneyPlan executeJourneyPlanRequest(String restUrl)
+	public JourneyPlan executeJourneyPlanRequest(String restUrl)
 	{
 	
-		RestResponse response = RestUtil.DoHttpGet(restUrl);
+		RestResponse response = m_restUtil.DoHttpGet(restUrl);
 		
 		Log.i(BrightSparkActivity.LOG_TAG, "executeJourneyPlan - Result Code: " + response.getCode());
     	

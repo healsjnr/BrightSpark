@@ -1,0 +1,264 @@
+{
+	"Request": {
+		"ApiKey": "733f873a-1e77-4c14-a84c-55ebf1a23cd7",
+		"Origin": {
+			"LocationType": 0,
+			"Value": "-27.465109,153.0503319"
+		},
+		"Destination": {
+			"LocationType": 0,
+			"Value": "-27.464936,153.029908"
+		},
+		"JourneyTime": "2012-04-01T13:32",
+		"DataSet": "Brisbane",
+		"IsMappingDataReturned": true,
+		"MaxJourneys": 3
+	},
+	"Journeys": [{
+		"Id": 1,
+		"DepartTime": "2012-04-01T13:43",
+		"ArriveTime": "2012-04-01T14:02",
+		"OriginLocationId": 0,
+		"DestinationLocationId": 1,
+		"DurationMinutes": 19,
+		"Legs": [{
+			"__type": "WalkLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 1,
+			"OriginLocationId": 0,
+			"DestinationLocationId": 2,
+			"DestinationLocationDescription": "ALFORD STREET - 12, MERTHYR RD APP ALFORD ST",
+			"Polyline": "-27.465109, 153.0503319;-27.464981, 153.0504285;-27.4647725, 153.0501523;-27.4640622, 153.049221;-27.4645739, 153.048722;-27.4651373, 153.048185;-27.4652993, 153.0480163;-27.4653079, 153.0480246",
+			"DurationMinutes": 6,
+			"WalkDistanceMetres": 356
+		},
+		{
+			"__type": "TripLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 2,
+			"OriginLocationId": 2,
+			"OriginLocationDescription": "ALFORD STREET - 12, MERTHYR RD APP ALFORD ST",
+			"DestinationLocationId": 3,
+			"DestinationLocationDescription": "CATHEDRAL ADELAIDE STREET STOP 33, ADELAIDE ST APP WHARF ST",
+			"Polyline": "-27.4653079, 153.0480246;-27.4669696, 153.046416;-27.4660403, 153.0446141;-27.4646686, 153.0427917;-27.4635857, 153.0414351;-27.4626291, 153.0402304;-27.4613927, 153.0385904;-27.4604992, 153.037578;-27.4588206, 153.0353307;-27.4605094, 153.0331148;-27.4648977, 153.0297154",
+			"DurationMinutes": 12,
+			"DepartTime": "2012-04-01T13:49",
+			"ArriveTime": "2012-04-01T14:01",
+			"Mode": "Bus",
+			"TripUid": "21199",
+			"TripCode": "21199",
+			"TripSourceId": "234421",
+			"RouteName": "WEST END BUZ 199 VIA VALLEY\/CITY",
+			"RouteCode": "199",
+			"RouteUid": "20418",
+			"ServiceProviderUid": "BT",
+			"Headsign": "234421",
+			"OriginStopSequenceNumber": "6",
+			"DestinationStopSequenceNumber": "16",
+			"TripStartTime": "2012-04-01T13:45"
+		},
+		{
+			"__type": "WalkLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 3,
+			"OriginLocationId": 3,
+			"OriginLocationDescription": "CATHEDRAL ADELAIDE STREET STOP 33, ADELAIDE ST APP WHARF ST",
+			"DestinationLocationId": 1,
+			"Polyline": "-27.4648977, 153.0297154;-27.464936, 153.029908",
+			"DurationMinutes": 1,
+			"WalkDistanceMetres": 19
+		}],
+		"ChangeCount": 0
+	},
+	{
+		"Id": 2,
+		"DepartTime": "2012-04-01T13:45",
+		"ArriveTime": "2012-04-01T14:08",
+		"OriginLocationId": 0,
+		"DestinationLocationId": 1,
+		"DurationMinutes": 23,
+		"Legs": [{
+			"__type": "WalkLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 1,
+			"OriginLocationId": 0,
+			"DestinationLocationId": 4,
+			"DestinationLocationDescription": "NEW FARM JUNCTION - 14, BRUNSWICK ST APP MERTHYR RD",
+			"Polyline": "-27.465109, 153.0503319;-27.4648521, 153.0500732;-27.4661475, 153.048787;-27.4679235, 153.047149;-27.4673019, 153.0463558;-27.4673669, 153.0463049",
+			"DurationMinutes": 9,
+			"WalkDistanceMetres": 597
+		},
+		{
+			"__type": "TripLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 2,
+			"OriginLocationId": 4,
+			"OriginLocationDescription": "NEW FARM JUNCTION - 14, BRUNSWICK ST APP MERTHYR RD",
+			"DestinationLocationId": 3,
+			"DestinationLocationDescription": "CATHEDRAL ADELAIDE STREET STOP 33, ADELAIDE ST APP WHARF ST",
+			"Polyline": "-27.4673669, 153.0463049;-27.4685049, 153.0448883;-27.4701665, 153.0432696;-27.4687677, 153.0417204;-27.4663935, 153.0408896;-27.4649487, 153.0421238;-27.4635857, 153.0414351;-27.4626291, 153.0402304;-27.4613927, 153.0385904;-27.4604992, 153.037578;-27.4588206, 153.0353307;-27.4605094, 153.0331148;-27.4648977, 153.0297154",
+			"DurationMinutes": 13,
+			"DepartTime": "2012-04-01T13:54",
+			"ArriveTime": "2012-04-01T14:07",
+			"Mode": "Bus",
+			"TripUid": "21681",
+			"TripCode": "21681",
+			"TripSourceId": "319812",
+			"RouteName": "FAIRFIELD GARDENS BUZ VIA VALLEY\/CITY 196",
+			"RouteCode": "196",
+			"RouteUid": "20438",
+			"ServiceProviderUid": "BT",
+			"Headsign": "319812",
+			"OriginStopSequenceNumber": "9",
+			"DestinationStopSequenceNumber": "21",
+			"TripStartTime": "2012-04-01T13:50"
+		},
+		{
+			"__type": "WalkLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 3,
+			"OriginLocationId": 3,
+			"OriginLocationDescription": "CATHEDRAL ADELAIDE STREET STOP 33, ADELAIDE ST APP WHARF ST",
+			"DestinationLocationId": 1,
+			"Polyline": "-27.4648977, 153.0297154;-27.464936, 153.029908",
+			"DurationMinutes": 1,
+			"WalkDistanceMetres": 19
+		}],
+		"ChangeCount": 0
+	},
+	{
+		"Id": 3,
+		"DepartTime": "2012-04-01T13:49",
+		"ArriveTime": "2012-04-01T14:15",
+		"OriginLocationId": 0,
+		"DestinationLocationId": 1,
+		"DurationMinutes": 26,
+		"Legs": [{
+			"__type": "WalkLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 1,
+			"OriginLocationId": 0,
+			"DestinationLocationId": 5,
+			"DestinationLocationDescription": "GIBBON ST APP JAMES ST",
+			"Polyline": "-27.465109, 153.0503319;-27.464981, 153.0504285;-27.4647725, 153.0501523;-27.4640622, 153.049221;-27.4631013, 153.0480155;-27.4621596, 153.0468179;-27.4621787, 153.0467588;-27.4621616, 153.0467039;-27.4621105, 153.0466706;-27.4620485, 153.0466898;-27.4613598, 153.0457622;-27.46058, 153.0447626;-27.459882, 153.0438374;-27.4595895, 153.0441214;-27.4596035, 153.0441358",
+			"DurationMinutes": 14,
+			"WalkDistanceMetres": 927
+		},
+		{
+			"__type": "TripLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 2,
+			"OriginLocationId": 5,
+			"OriginLocationDescription": "GIBBON ST APP JAMES ST",
+			"DestinationLocationId": 6,
+			"DestinationLocationDescription": "ANN STREET STOP 5, ANN ST F\/S QUEEN ST",
+			"Polyline": "-27.4596035, 153.0441358;-27.45862, 153.0422328;-27.4572122, 153.040451;-27.4558678, 153.0376473;-27.4595612, 153.0339646;-27.4629204, 153.0305853",
+			"DurationMinutes": 7,
+			"DepartTime": "2012-04-01T14:03",
+			"ArriveTime": "2012-04-01T14:10",
+			"Mode": "Bus",
+			"TripUid": "8986",
+			"TripCode": "8986",
+			"TripSourceId": "258901",
+			"RouteName": "TOOWONG 470",
+			"RouteCode": "470",
+			"RouteUid": "15219",
+			"ServiceProviderUid": "BT",
+			"Headsign": "258901",
+			"OriginStopSequenceNumber": "5",
+			"DestinationStopSequenceNumber": "10",
+			"TripStartTime": "2012-04-01T14:00"
+		},
+		{
+			"__type": "WalkLeg:http:\/\/www.jeppesen.com\/journeyplanner",
+			"Id": 3,
+			"OriginLocationId": 6,
+			"OriginLocationDescription": "ANN STREET STOP 5, ANN ST F\/S QUEEN ST",
+			"DestinationLocationId": 1,
+			"Polyline": "-27.4629204, 153.0305853;-27.4629851, 153.030519;-27.4636761, 153.0311938;-27.4640465, 153.0307222;-27.4644993, 153.0301441;-27.4647584, 153.0297812;-27.464936, 153.029908",
+			"DurationMinutes": 5,
+			"WalkDistanceMetres": 317
+		}],
+		"ChangeCount": 0
+	}],
+	"ServiceProviderReferenceData": [{
+		"ServiceProviderUid": "BT",
+		"Name": "BRISBANE TRANSPORT"
+	}],
+	"Locations": [{
+		"Id": 0,
+		"Location": {
+			"__type": "GeoLocation:http:\/\/www.jeppesen.com\/journeyplanner",
+			"DataSet": "Brisbane",
+			"Position": "-27.465109, 153.0503319"
+		}
+	},
+	{
+		"Id": 1,
+		"Location": {
+			"__type": "GeoLocation:http:\/\/www.jeppesen.com\/journeyplanner",
+			"DataSet": "Brisbane",
+			"Position": "-27.464936, 153.029908"
+		}
+	},
+	{
+		"Id": 2,
+		"Location": {
+			"__type": "TransitStop:http:\/\/www.jeppesen.com\/journeyplanner",
+			"DataSet": "Brisbane",
+			"Code": "24333",
+			"StopUid": "24333",
+			"Description": "ALFORD STREET - 12, MERTHYR RD APP ALFORD ST",
+			"Position": "-27.4653079, 153.0480246",
+			"SupportedModes": "Bus",
+			"Routes": "20413;20416;20418;20425;20762;22127;23428"
+		}
+	},
+	{
+		"Id": 3,
+		"Location": {
+			"__type": "TransitStop:http:\/\/www.jeppesen.com\/journeyplanner",
+			"DataSet": "Brisbane",
+			"Code": "24299",
+			"StopUid": "24299",
+			"Description": "CATHEDRAL ADELAIDE STREET STOP 33, ADELAIDE ST APP WHARF ST",
+			"Position": "-27.4648977, 153.0297154",
+			"SupportedModes": "Bus",
+			"Routes": "10117;12178;12179;12183;12189;12190;12191;12422;12426;12428;12431;12434;12443;12444;12447;12449;12450;12451;12452;12453;12454;12455;12485;12567;13047;14066;14843;14850;14982;14983;14985;14986;14988;15006;15015;15020;15021;15022;15024;15030;15031;17659;17662;17672;17673;17675;17693;18101;18102;18104;18105;18106;18119;18582;18583;18584;20368;20369;20370;20371;20372;20413;20416;20418;20425;20434;20436;20437;20438;20439;20440;20701;20703;20704;20705;20706;20707;20720;20723;20732;22127;22132"
+		}
+	},
+	{
+		"Id": 4,
+		"Location": {
+			"__type": "TransitStop:http:\/\/www.jeppesen.com\/journeyplanner",
+			"DataSet": "Brisbane",
+			"Code": "24337",
+			"StopUid": "24337",
+			"Description": "NEW FARM JUNCTION - 14, BRUNSWICK ST APP MERTHYR RD",
+			"Position": "-27.4673669, 153.0463049",
+			"SupportedModes": "Bus",
+			"Routes": "20434;20436;20437;20438;20439;20440;22132"
+		}
+	},
+	{
+		"Id": 5,
+		"Location": {
+			"__type": "TransitStop:http:\/\/www.jeppesen.com\/journeyplanner",
+			"DataSet": "Brisbane",
+			"Code": "31515",
+			"StopUid": "31515",
+			"Description": "GIBBON ST APP JAMES ST",
+			"Position": "-27.4596035, 153.0441358",
+			"SupportedModes": "Bus",
+			"Routes": "10741;15219;17192"
+		}
+	},
+	{
+		"Id": 6,
+		"Location": {
+			"__type": "TransitStop:http:\/\/www.jeppesen.com\/journeyplanner",
+			"DataSet": "Brisbane",
+			"Code": "24267",
+			"StopUid": "24267",
+			"Description": "ANN STREET STOP 5, ANN ST F\/S QUEEN ST",
+			"Position": "-27.4629204, 153.0305853",
+			"SupportedModes": "Bus",
+			"Routes": "10133;10716;10717;10723;10741;10743;11320;14045;14394;14396;14411;15108;15109;15110;15219;15220;15821;16202;16213;16740;17192;17246;17558;17562;18416;20273;21922;3384;5417;8857;8859;8924"
+		}
+	}],
+	"Status": {
+		"Severity": 0
+	}
+}

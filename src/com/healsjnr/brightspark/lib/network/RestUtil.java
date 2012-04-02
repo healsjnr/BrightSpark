@@ -24,8 +24,9 @@ import android.util.Log;
 import com.healsjnr.brightspark.ApplicationState;
 import com.healsjnr.brightspark.BrightSparkActivity;
 
-public class RestUtil {
-	public static String BuildRestURL(String baseUrl, List<QueryParam> parameters)
+public class RestUtil implements IRestUtil {
+	
+	public String BuildRestURL(String baseUrl, List<QueryParam> parameters)
 	{
     	if (parameters == null || parameters.size() == 0)
     	{
@@ -57,13 +58,13 @@ public class RestUtil {
 
 	}
 	
-	public static RestResponse DoHttpGet(String url)
+	public RestResponse DoHttpGet(String url)
 	{
 		HttpGet httpget = new HttpGet(url);
 		return DoRESTQuery(httpget);
 	}
 	
-	public static RestResponse DoHttpPut(String url, JSONObject jsonData)
+	public RestResponse DoHttpPut(String url, JSONObject jsonData)
 	{
 		HttpPut httpPut = new HttpPut(url);
 		if (jsonData == null)
@@ -88,7 +89,7 @@ public class RestUtil {
     	return response;
 	}
 
-	public static RestResponse DoHttpPost(String url, JSONObject jsonData)
+	public RestResponse DoHttpPost(String url, JSONObject jsonData)
 	{
 		HttpPost httpPost = new HttpPost(url);
 		if (jsonData == null)
@@ -115,7 +116,7 @@ public class RestUtil {
     	return response;
 	}
 	
-	private static RestResponse DoRESTQuery(HttpUriRequest request)  
+	private RestResponse DoRESTQuery(HttpUriRequest request)  
     {
 		RestResponse response = new RestResponse();
 		
@@ -173,7 +174,7 @@ public class RestUtil {
     } 
 	
 	// #TODO: should this throw exceptions rather than swallowing them?
-    private static String ConvertStreamToString(InputStream is) throws IOException {
+    private String ConvertStreamToString(InputStream is) throws IOException {
    	 
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
