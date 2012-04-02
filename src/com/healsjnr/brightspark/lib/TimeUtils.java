@@ -298,6 +298,26 @@ public class TimeUtils {
 		
 		return "";
 	}
+ 	
+ 	/**
+ 	 * Converts the time specified in the supplied date to minutes past midnight.
+ 	 * @param d - the date representing the time.
+ 	 * @return the minutes past midnight specified in the date.
+ 	 */
+ 	public static int convertTimeToMinutesPastMidnight(Date d)
+ 	{
+ 		return (d.getHours() * 60) + d.getMinutes();
+ 	}
+ 	
+ 	/**
+ 	 * Converts the time specified in the supplied calendar to minutes past midnight.
+ 	 * @param c - the calendar representing the time.
+ 	 * @return the minutes past midnight specified in the calendar.
+ 	 */
+ 	public static int convertTimeToMinutesPastMidnight(Calendar c)
+ 	{
+ 		return (c.get(Calendar.HOUR_OF_DAY) * 60) + c.get(Calendar.MINUTE);
+ 	}
 	
 	private static String pad(int c) {
 		if (c >= 10)

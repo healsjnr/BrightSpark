@@ -42,6 +42,11 @@ public class FavouriteLocation {
 	
 	public String getName()
 	{
+		if (m_name.isEmpty())
+		{
+			return m_address.toString();
+		}
+		
 		return m_name;
 	}
 	
