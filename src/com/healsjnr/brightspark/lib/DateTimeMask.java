@@ -10,7 +10,9 @@ import com.healsjnr.brightspark.BrightSparkActivity;
 
 public class DateTimeMask {
 	
-	private boolean[] m_dayMask;
+	private static char NULL_CHAR = '-';
+	
+	private boolean[] m_dayMask = new boolean[7];
 	private Date m_startTime;
 	private Date m_endTime;
 	
@@ -54,12 +56,34 @@ public class DateTimeMask {
 	
 	public void clearMask()
 	{
-		m_dayMask = new boolean[] {false, false, false, false, false, false, false};
+		for (int i = 0; i < m_dayMask.length; i++)
+		{
+			m_dayMask[i] = false;
+		}
 	}
 
 	public boolean[] getDayMask()
 	{
 		return m_dayMask;
+	}
+	
+	public String getDayMaskString()
+	{
+		char[] dayChars = new char[7];
+		for (int i = 0; i < dayChars.length; i++)
+		{
+			dayChars[i] = NULL_CHAR;
+		}
+		
+		if (m_dayMask[0]) dayChars[0] = 'S';
+		if (m_dayMask[1]) dayChars[1] = 'M';
+		if (m_dayMask[2]) dayChars[2] = 'T';
+		if (m_dayMask[3]) dayChars[3] = 'W';
+		if (m_dayMask[4]) dayChars[4] = 't';
+		if (m_dayMask[5]) dayChars[5] = 'F';
+		if (m_dayMask[6]) dayChars[6] = 's';
+		
+		return new String(dayChars);
 	}
 	
 	public void setDayMask(boolean[] dayMask)
@@ -71,6 +95,21 @@ public class DateTimeMask {
 		}
 		
 		m_dayMask = dayMask;
+	}
+	
+	public void setDayMaskFromString(String dayMask)
+	{
+		if (dayMask.length() != 7)
+		{
+			Log.e(BrightSparkActivity.LOG_TAG, "DateTimeMask(): invalid day mask string - wrong number of elements: " + dayMask.length());
+			return;
+		}
+		
+		for(int i = 0; i < dayMask.length(); i++)
+		{
+			m_dayMask[i] = (dayMask.charAt(i) != NULL_CHAR); 
+		}
+		
 	}
 	
 	public void setAllWeekdays()

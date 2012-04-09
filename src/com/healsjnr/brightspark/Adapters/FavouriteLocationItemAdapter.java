@@ -58,26 +58,7 @@ public class FavouriteLocationItemAdapter extends
 			
 			v.setTag(fav);
 			v.setOnClickListener(m_onClickListener);
-			/*v.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View view) {
-					FavouriteLocation favouriteLoc = (FavouriteLocation) view.getTag();
-					
-					SimpleJourneyQuery journeyQuery = new SimpleJourneyQuery();
-					journeyQuery.setOriginDescription(SimpleJourneyQuery.CURRENT_POSITION_STRING);
-					journeyQuery.setDestinationDescription(favouriteLoc.getName());
-					journeyQuery.setDestination(favouriteLoc.getLocation());
-					
-					Calendar c = Calendar.getInstance();
-					journeyQuery.setDateTime(c.getTime());
-					
-					journeyQuery.setTimeMode(TimeMode.LeaveAfter);
-					
-					m_parentActivity.launchJourneyResultActivtiy(journeyQuery);
-				}
 
-				
-			});*/
 		}
 		
 		return v;

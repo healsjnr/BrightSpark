@@ -10,20 +10,49 @@ public class CountdownJourney {
 	private FavouriteLocation m_destination;
 
 	private DateTimeMask m_dateTimeMask;
+
+	private String m_name;
 	
-	public CountdownJourney(FavouriteLocation origin, FavouriteLocation destination)
+	private long m_id;
+	
+	public CountdownJourney(FavouriteLocation origin, FavouriteLocation destination, String name)
 	{
 		m_dateTimeMask = new DateTimeMask();
 		m_origin = origin;
 		m_destination = destination;
+		m_name = name;
+		m_id = -1;
 	}
 	
-	public CountdownJourney(FavouriteLocation destination)
+	public CountdownJourney(FavouriteLocation destination, String name)
 	{
 		m_dateTimeMask = new DateTimeMask();
 		m_origin = null;
 		m_destination = destination;
+		m_name = name;
+		m_id = -1;
 	}
+	
+	public void setId(long id)
+	{
+		m_id = id;
+	}
+	
+	public long getId()
+	{
+		return m_id;
+	}
+	
+	public void setName(String name)
+	{
+		m_name = name;
+	}
+	
+	public String getName()
+	{
+		return m_name;
+	}
+	
 	
 	public void setDateTimeMask(DateTimeMask dtMask)
 	{

@@ -31,7 +31,12 @@ public class FavouriteLocationTable {
 	
 	public static void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion)
 	{
-		Log.i(BrightSparkActivity.LOG_TAG, "Upgrading database from version " + oldVersion + " to " + newVersion + "."
+		if(newVersion == 2)
+		{
+			return;
+		}
+		
+		Log.i(BrightSparkActivity.LOG_TAG, "Upgrading database table " + TABLE_NAME + " from version " + oldVersion + " to " + newVersion + "."
 				+ "Old data will be destroyed.");
 		database.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
 		onCreate(database);

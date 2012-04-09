@@ -15,7 +15,7 @@ public class CountdownTest extends TestCase {
 		SimpleAddress address = new SimpleAddress("133 test st, New Farm", 1.1, 2.2);
 		FavouriteLocation fav = new FavouriteLocation("Home", address, 1);
 		
-		CountdownJourney journey = new CountdownJourney(fav);
+		CountdownJourney journey = new CountdownJourney(fav, "Test 1");
 		
 		SimpleJourneyQuery query = journey.getNextJourneyQuery();
 		
@@ -27,7 +27,7 @@ public class CountdownTest extends TestCase {
 		SimpleAddress fromAddress = new SimpleAddress("8 another st, New Farm", 5.1, 12.2);
 		FavouriteLocation fromFav = new FavouriteLocation("Some Other Place", fromAddress, 2);
 		
-		CountdownJourney journeyWithOrigin = new CountdownJourney(fromFav, fav);
+		CountdownJourney journeyWithOrigin = new CountdownJourney(fromFav, fav, "Test 2");
 		
 		SimpleJourneyQuery queryWithOrigin = journeyWithOrigin.getNextJourneyQuery();
 		
