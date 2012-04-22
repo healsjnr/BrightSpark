@@ -8,6 +8,7 @@ import com.viewpagerindicator.TitlePageIndicator.IndicatorStyle;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
@@ -35,6 +36,7 @@ public class BrightSparkActivity extends Activity {
 	    indicator.setFooterIndicatorPadding(8f);
 	    indicator.setViewPager(pager);
 	    indicator.setOnPageChangeListener(m_mainViewAdapter.getOnPageChangedListener());
+	    
 	    
 	    pager.setCurrentItem(MainViewPageAdapter.COUNTDOWN_INDEX);
         

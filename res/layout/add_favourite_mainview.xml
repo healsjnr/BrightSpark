@@ -23,48 +23,58 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/inputLayout"
+        android:id="@+id/inputBackgroundLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" >
+        android:layout_alignParentTop="true"
+        android:background="@android:color/background_light" >
 
-        <EditText
-            android:id="@+id/addFavouriteEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="75px"
-            android:layout_weight="1"
-            android:hint="Enter Address" 
-            android:imeOptions="actionGo"
-            android:focusable="true"
-			android:focusableInTouchMode="true" 
-			android:singleLine="true">
-			
-            <requestFocus />
-        </EditText>
+        <LinearLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin" >
 
-        <ImageButton
-            android:id="@+id/addFavouriteSearchButton"
-            android:layout_width="75px"
-            android:layout_height="75px"
-            android:src="@android:drawable/ic_menu_search" />
+            <EditText
+                android:id="@+id/addFavouriteEditText"
+                style="@style/EditTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Enter Address"
+                android:imeOptions="actionGo"
+                android:singleLine="true" >
 
-        <ImageButton
-            android:id="@+id/addFavouriteCurrentLocationButton"
-            android:layout_width="75px"
-            android:layout_height="75px"
-            android:src="@android:drawable/ic_menu_compass" />
+                <requestFocus />
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/addFavouriteSearchButton"
+                style="@style/ImageButtonStyle"
+                android:src="@drawable/search_2_32x32_black" />
+
+            <ImageButton
+                android:id="@+id/addFavouriteCurrentLocationButton"
+                style="@style/ImageButtonStyle"
+                android:src="@drawable/current_location_32x32_black" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/addFavouriteSaveButtonLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin" >
 
         <Button
             android:id="@+id/addFavouriteSaveButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_gravity="center_horizontal"
             android:text="Save" />
     </LinearLayout>

@@ -8,7 +8,7 @@
         android:id="@+id/singleJourneyListView"
         android:layout_width="match_parent"
         android:layout_height="fill_parent" 
-        style="@style/ListViewLayout">/
+        style="@style/ListViewLayout">
     </ListView>
 
 </LinearLayout>

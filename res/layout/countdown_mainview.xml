@@ -8,37 +8,29 @@
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1" >
 
-        
         <ListView
             android:id="@+id/mainCountDownListView"
+            style="@style/ListViewLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" 
-            style="@style/ListViewLayout">
+            android:layout_height="match_parent" >
         </ListView>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:layout_weight="2">
-        
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal" >
+        android:layout_height="63dp"
+        android:gravity="bottom" 
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin">
 
-            <Button
-                android:id="@+id/countdownAddButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Countdown"/>
-        </LinearLayout>
+        <Button
+            android:id="@+id/countdownAddButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="New Countdown" />
     </LinearLayout>
 
 </LinearLayout>

@@ -4,7 +4,10 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="10" />
+    <uses-sdk
+        android:maxSdkVersion="15"
+        android:minSdkVersion="10"
+        android:targetSdkVersion="15" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
     </uses-permission>
@@ -16,19 +19,31 @@
     </uses-permission>
 
     <application
+        android:theme="@style/GlobalTheme"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name">
+        android:label="@string/app_name" >
         <activity
-            android:label="@string/app_name"
-            android:name=".BrightSparkActivity" >
-            <intent-filter >
+            android:name=".BrightSparkActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		<activity android:name=".AddFavouriteActivity" android:screenOrientation="portrait"></activity>
-		<activity android:name=".JourneyResultsActivity" android:screenOrientation="portrait"></activity>
-		<activity android:name=".JourneyMapActivity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AddFavouriteActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".JourneyResultsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".JourneyMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
         <uses-library android:name="com.google.android.maps" />
     </application>
 

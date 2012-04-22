@@ -1,119 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin"
+    android:paddingRight="@dimen/margin" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <RelativeLayout
+        android:id="@+id/fromHearderLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
 
-        <EditText
-            android:id="@+id/journeyPlannerFromEditText"
+        <TextView
+            android:id="@+id/fromLabelTextView"
+            style="@style/TextViewStyle"
             android:layout_width="wrap_content"
-            android:layout_height="75px"
-            android:layout_weight="1"
-            android:hint="From Location" 
-            android:imeOptions="actionGo"
-            android:focusable="true"
-			android:focusableInTouchMode="true" 
-			android:singleLine="true">
+            android:layout_alignParentLeft="true"
+            android:text="Leaving from"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
 
-        </EditText>
+        <ImageButton
+            android:id="@+id/journeyPlanCurrentLocationFromButton"
+            style="@style/ImageButtonStyle"
+            android:layout_alignParentRight="true"
+            android:padding="0dp"
+            android:src="@drawable/current_location_32x32_black" />
 
         <ImageButton
             android:id="@+id/journeyPlanFromFavouriteButton"
-            android:layout_width="75px"
-            android:layout_height="75px"
+            style="@style/ImageButtonStyle"
+            android:layout_toLeftOf="@id/journeyPlanCurrentLocationFromButton"
+            android:padding="0dp"
             android:src="@android:drawable/btn_star" />
-        <ImageButton
-            android:id="@+id/journeyPlanCurrentLocationFromButton"
-            android:layout_width="75px"
-            android:layout_height="75px"
-            android:src="@android:drawable/ic_menu_compass" />
-    </LinearLayout>
+    </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <EditText
+        android:id="@+id/journeyPlannerFromEditText"
+        style="@style/EditTextStyle"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/fromHearderLayout"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="Enter Address..."
+        android:imeOptions="actionGo"
+        android:singleLine="true" >
+    </EditText>
+
+    <RelativeLayout
+        android:id="@+id/toHearderLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_below="@id/journeyPlannerFromEditText" >
 
-        <EditText
-            android:id="@+id/journeyPlannerToEditText"
+        <TextView
+            android:id="@+id/toLabelTextView"
+            style="@style/TextViewStyle"
             android:layout_width="wrap_content"
-            android:layout_height="75px"
-            android:layout_weight="1"
-            android:hint="To Location" 
-            android:imeOptions="actionGo"
-            android:focusable="true"
-			android:focusableInTouchMode="true" 
-			android:singleLine="true">
-        </EditText>
-
-        <ImageButton
-            android:id="@+id/journeyPlanToFavouriteButton"
-            android:layout_width="75px"
-            android:layout_height="75px"
-            android:src="@android:drawable/btn_star" />
+            android:layout_alignParentLeft="true"
+            android:text="Heading to"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
 
         <ImageButton
             android:id="@+id/journeyPlanCurrentLocationToButton"
-            android:layout_width="75px"
-            android:layout_height="75px"
-            android:src="@android:drawable/ic_menu_compass" />
-    </LinearLayout>
+            style="@style/ImageButtonStyle"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/current_location_32x32_black" />
+
+        <ImageButton
+            android:id="@+id/journeyPlanToFavouriteButton"
+            style="@style/ImageButtonStyle"
+            android:layout_toLeftOf="@id/journeyPlanCurrentLocationToButton"
+            android:src="@android:drawable/btn_star" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/journeyPlannerToEditText"
+        style="@style/EditTextStyle"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/toHearderLayout"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="Enter Address..."
+        android:imeOptions="actionGo"
+        android:singleLine="true" >
+    </EditText>
 
     <Spinner
         android:id="@+id/journeyPlanTimeModeSpinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"  style="@style/spinner_style"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/journeyPlannerToEditText" android:background="@drawable/spinner_default_holo_light"/>
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <RelativeLayout
+        android:id="@+id/dateTimeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_below="@id/journeyPlanTimeModeSpinner"
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/journeyPlanTimeTextView"
+            style="@style/TextViewStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Time"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <Button
-            android:id="@+id/journeyPlanTimeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="..." />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+            android:background="@drawable/spinner_default_holo_light"
+            android:text="15:08"
+            android:textAppearance="@android:style/TextAppearance.Medium" 
+            android:layout_alignParentLeft="true"/>
 
         <TextView
             android:id="@+id/journeyPlanDateTextView"
+            style="@style/TextViewStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Date"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:background="@drawable/spinner_default_holo_light"
+            android:text="21/02/2012"
+            android:textAppearance="@android:style/TextAppearance.Medium" 
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/goButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom" >
 
         <Button
-            android:id="@+id/journeyPlanDateButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/journeyPlanGoButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="..." />
+            android:text="Go!" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/journeyPlanGoButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        
-        android:text="Go!" />
-
-</LinearLayout>
+</RelativeLayout>

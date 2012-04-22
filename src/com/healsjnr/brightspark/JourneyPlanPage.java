@@ -249,7 +249,7 @@ public class JourneyPlanPage implements IGeoCodedAddressReady, IPageChangedListe
 		String[] timeModes = { LEAVE_AFTER_STRING, ARRIVE_BY_STRING };
 
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(m_context,
-				android.R.layout.simple_list_item_1, timeModes);
+				R.layout.spinner_default, timeModes);
 		m_timeModeSpinner.setAdapter(adapter);
 
 		m_timeTextView = (TextView) page
